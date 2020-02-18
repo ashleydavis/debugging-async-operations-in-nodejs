@@ -4,7 +4,7 @@
 // node --expose-gc example.js
 //
 
-const { AsyncTracker } = require("./lib/async-tracker");
+const { AsyncTracker: AsyncDebugger } = require("./lib/async-debugger");
 
 function doTimeout() {
     console.log("Starting timeout.");
@@ -14,6 +14,6 @@ function doTimeout() {
     }, 2000);
 }
 
-const asyncTracker = new AsyncTracker();
+const asyncTracker = new AsyncDebugger();
 asyncTracker.notifyComplete(() => console.log("All done!"));
-asyncTracker.initTrackingContext("test-1", doTimeout);
+asyncTracker.startTracking("test-1", doTimeout);
