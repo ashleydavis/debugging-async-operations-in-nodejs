@@ -6,8 +6,6 @@
 
 const { AsyncTracker } = require("./lib/async-tracker");
 
-const asyncTracker = new AsyncTracker();
-
 function doTimeout() {
     console.log("Starting timeout.");
 
@@ -16,5 +14,6 @@ function doTimeout() {
     }, 2000);
 }
 
-asyncTracker.notifyComplete(() => console.log("Async operations have completed!"));
+const asyncTracker = new AsyncTracker();
+asyncTracker.notifyComplete(() => console.log("All done!"));
 asyncTracker.initTrackingContext("test-1", doTimeout);
