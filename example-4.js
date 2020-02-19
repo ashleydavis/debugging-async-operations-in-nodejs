@@ -21,7 +21,9 @@ function doTimeout() {
 }
 
 const asyncDebugger = new AsyncDebugger();
-asyncDebugger.notifyComplete(() => console.log("********** All done! **********"));
+asyncDebugger.notifyComplete(() => {
+    asyncDebugger.debug("test-1");
+});
 asyncDebugger.startTracking("test-1", doTimeout);
 
 console.log("End of script");

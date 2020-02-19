@@ -17,6 +17,7 @@
   "author": "ashley@codecapers.com.au",
   "license": "MIT",
   "dependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "oo-ascii-tree": "^1.0.0"
   }
 }
