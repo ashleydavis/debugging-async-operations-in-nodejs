@@ -6,6 +6,8 @@
 
 const { AsyncDebugger } = require("./lib/async-debugger");
 
+console.log("Starting up!"); 
+
 function doTimeout() {
     console.log("Starting timeout.");
 
